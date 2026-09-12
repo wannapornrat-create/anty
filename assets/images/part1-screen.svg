@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="screenDisplay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="30%" stop-color="#06b6d4" />
+      <stop offset="70%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="goldSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  
+  <!-- Grid Lines -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" /><line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" /><line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" /><line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" /><line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="100" y1="0" x2="100" y2="500" /><line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" /><line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="500" y1="0" x2="500" y2="500" /><line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="700" y1="0" x2="700" y2="500" />
+  </g>
+
+  <!-- Ambient Glow behind screen -->
+  <circle cx="280" cy="250" r="180" fill="#06b6d4" opacity="0.12" filter="url(#neonGlow)" />
+  <circle cx="580" cy="220" r="150" fill="#ec4899" opacity="0.08" filter="url(#neonGlow)" />
+
+  <!-- Phone Screen Outline & Frame -->
+  <g transform="translate(140, 50)">
+    <!-- Titanium Frame Shadow -->
+    <rect x="-6" y="-6" width="232" height="412" rx="28" fill="#000" opacity="0.6" />
+    <!-- Titanium Outer Frame -->
+    <rect x="-4" y="-4" width="228" height="408" rx="26" fill="#2d3748" stroke="#4a5568" stroke-width="2" />
+    <!-- Screen Glass Border -->
+    <rect x="0" y="0" width="220" height="400" rx="22" fill="#000" stroke="#06b6d4" stroke-width="1.5" />
+    <!-- AMOLED Active Display Area -->
+    <rect x="6" y="6" width="208" height="388" rx="18" fill="url(#screenDisplay)" opacity="0.9" />
+    <!-- Screen Glare Line -->
+    <path d="M 12 12 L 180 12 L 30 380 L 12 380 Z" fill="#ffffff" opacity="0.07" />
+    <!-- Infinity-O Camera Cutout -->
+    <circle cx="110" cy="26" r="6" fill="#000000" stroke="#1f2937" stroke-width="1" />
+    <circle cx="110" cy="26" r="2.5" fill="#1e293b" />
+    <!-- Speaker Grill -->
+    <rect x="90" y="8" width="40" height="2" rx="1" fill="#4b5563" />
+
+    <!-- Ribbon Cable (Flex Cable) coming from bottom -->
+    <path d="M 70 400 L 70 435 Q 70 445 80 445 L 140 445 Q 150 445 150 435 L 150 400" fill="#1e293b" stroke="#334155" stroke-width="2" />
+    <!-- Flex Cable Gold Pins -->
+    <rect x="85" y="440" width="50" height="8" rx="2" fill="#eab308" />
+    <line x1="90" y1="440" x2="90" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="95" y1="440" x2="95" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="100" y1="440" x2="100" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="105" y1="440" x2="105" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="110" y1="440" x2="110" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="115" y1="440" x2="115" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="120" y1="440" x2="120" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="125" y1="440" x2="125" y2="448" stroke="#78350f" stroke-width="1" />
+    <line x1="130" y1="440" x2="130" y2="448" stroke="#78350f" stroke-width="1" />
+
+    <!-- Overlay Specs on Screen -->
+    <rect x="25" y="160" width="170" height="90" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255,255,255,0.2)" />
+    <text x="110" y="185" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" text-anchor="middle">DYNAMIC AMOLED 2X</text>
+    <text x="110" y="205" fill="#f8fafc" font-family="'Prompt', sans-serif" font-weight="600" font-size="12" text-anchor="middle">120Hz LTPO DISPLAY</text>
+    <text x="110" y="225" fill="#94a3b8" font-family="'Plus Jakarta Sans', monospace" font-size="10" text-anchor="middle">2600 nits Peak Brightness</text>
+    <text x="110" y="240" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" text-anchor="middle">✔ TESTED 100% ORIGINAL</text>
+  </g>
+
+  <!-- Right Side Product Info & Badges -->
+  <g transform="translate(420, 90)">
+    <!-- Brand Tag -->
+    <rect x="0" y="0" width="175" height="30" rx="15" fill="rgba(6, 182, 212, 0.15)" stroke="#06b6d4" stroke-width="1.5" />
+    <text x="87" y="20" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" text-anchor="middle">SAMSUNG SERVICE PACK</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" fill="#ffffff" font-family="'Prompt', sans-serif" font-weight="800" font-size="24">ชุดจอแท้ศูนย์ Galaxy S24 Ultra</text>
+    <text x="0" y="98" fill="#94a3b8" font-family="'Prompt', sans-serif" font-size="15">พร้อมเฟรมแท้ไทเทเนียมและสายแพรครบชุด</text>
+
+    <!-- Part Details Box -->
+    <rect x="0" y="125" width="340" height="150" rx="16" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(148, 163, 184, 0.2)" />
+    
+    <text x="20" y="155" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12">PART NUMBER</text>
+    <text x="20" y="177" fill="#38bdf8" font-family="'Plus Jakarta Sans', monospace" font-weight="700" font-size="15">GH82-33829A / GH82-33830A</text>
+
+    <line x1="20" y1="192" x2="320" y2="192" stroke="rgba(148, 163, 184, 0.15)" />
+
+    <text x="20" y="215" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12">COMPATIBILITY</text>
+    <text x="20" y="235" fill="#f1f5f9" font-family="'Prompt', sans-serif" font-weight="600" font-size="13">SM-S928B / SM-S928U / SM-S9280</text>
+
+    <text x="20" y="258" fill="#10b981" font-family="'Prompt', sans-serif" font-weight="600" font-size="12">● สินค้ามีสต็อกพร้อมจัดส่งทันที (In-Stock)</text>
+
+    <!-- Holographic Quality Stamp -->
+    <g transform="translate(230, 195)">
+      <circle cx="45" cy="45" r="40" fill="url(#goldSeal)" opacity="0.9" />
+      <circle cx="45" cy="45" r="36" fill="#0f172a" />
+      <circle cx="45" cy="45" r="33" stroke="#f59e0b" stroke-dasharray="3,2" fill="none" />
+      <text x="45" y="40" fill="#fbbf24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" text-anchor="middle">ORIGINAL</text>
+      <text x="45" y="52" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8" text-anchor="middle">GENUINE</text>
+      <text x="45" y="63" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" text-anchor="middle">100% QC</text>
+    </g>
+
+    <!-- Guarantee Badges -->
+    <g transform="translate(0, 295)">
+      <rect x="0" y="0" width="105" height="30" rx="8" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1" />
+      <text x="52" y="19" fill="#10b981" font-family="'Prompt', sans-serif" font-weight="600" font-size="11" text-anchor="middle">รับประกัน 90 วัน</text>
+
+      <rect x="115" y="0" width="115" height="30" rx="8" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" stroke-width="1" />
+      <text x="172" y="19" fill="#818cf8" font-family="'Prompt', sans-serif" font-weight="600" font-size="11" text-anchor="middle">เทสทัชสกรีนผ่าน</text>
+
+      <rect x="240" y="0" width="95" height="30" rx="8" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" stroke-width="1" />
+      <text x="287" y="19" fill="#fbbf24" font-family="'Prompt', sans-serif" font-weight="600" font-size="11" text-anchor="middle">สแกนนิ้วปกติ</text>
+    </g>
+  </g>
+</svg>
